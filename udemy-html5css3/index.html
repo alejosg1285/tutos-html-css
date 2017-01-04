@@ -4,14 +4,364 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Fake YouTube</title>
 
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <div class="container-fluid">
+        <<div class="row">
+          <div class="col-md-2">
+            <a href="#"><img src="images/youtube.png" class="img-responsive logo"></a>
+            <a href="#" id="menu-toggle">
+              <img src="images/menu.png" >
+            </a>
+          </div> <!-- End logo and menu toggle -->
+          <div class="col-md-5">
+            <form>
+              <input type="text" placeholder="Type to search...">
+            </form>
+          </div> <!-- End search bar -->
+          <div class="col-md-5">
+            <ul>
+              <li><a href="#" class="button">Upload</a></li>
+              <li>
+                <ul class="notifications">
+                  <li><i class="fa fa-envelope"></i><span>1</span></li>
+                  <li><i class="fa fa-bell"></i><span>3</span></li>
+                </ul>
+              </li>
+              <li>
+                <img src="images/profile.png">
+                <div>
+                  <p class="username">John Doe</p>
+                  <p>9 susbcribers</p>
+                  <a href="#">Log Out</a>
+                </div>
+              </li>
+            </ul>
+          </div> <!-- End profile section -->
+        </div> <!-- End row -->
+      </div> <!-- End container fluid -->
+    </header> <!-- End header -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <ul>
+          <li class="active">Homw</li>
+          <li>Trending</li>
+          <li>Suspcrition</li>
+        </ul>
+
+        <div class="main-videos">
+          <div class="col-md-4 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/video.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h2>West Super Bowl 2015</h2>
+            <p><span>9 Days ago</span> By <a href="#">WestSuperBowl</a> - 18 232 245 Views</p>
+          </div> <!-- End first video -->
+          <div class="col-md-4">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/video2.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h2>Daft Punk - Get Lucky</h2>
+            <p><span>6 Days ago</span> By <a href="#">DaftPunkVEVO</a> - 83 456 198 Views</p>
+          </div> <!-- End second video -->
+          <ul class="mini">
+            <li class="col-md-2 video mini">
+              <div class="area">
+                <div class="mask">
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div>
+                  <img src="images/video3.png" alt="video" class="img-responsive">
+                  <span class="duration">44:33</span>
+                </div>
+              </div>
+              <h4>Daft Punk - Get Lucky</h4>
+              <p><span>6 Days ago</span> By <a href="#">DaftPunkVEVO</a></p>
+              <p class="views">45 482 485 Views</p>
+            </li>
+            <li class="col-md-2 video mini">
+              <div class="area">
+                <div class="mask">
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div>
+                  <img src="images/video4.png" alt="video" class="img-responsive">
+                  <span class="duration">44:33</span>
+                </div>
+              </div>
+              <h4>Daft Punk - Get Lucky</h4>
+              <p><span>6 Days ago</span> By <a href="#">DaftPunkVEVO</a></p>
+              <p class="views">45 482 485 Views</p>
+            </li>
+            <li class="col-md-2 video mini">
+              <div class="area">
+                <div class="mask">
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div>
+                  <img src="images/video5.png" alt="video" class="img-responsive">
+                  <span class="duration">44:33</span>
+                </div>
+              </div>
+              <h4>Daft Punk - Get Lucky</h4>
+              <p><span>6 Days ago</span> By <a href="#">DaftPunkVEVO</a></p>
+              <p class="views">45 482 485 Views</p>
+            </li>
+            <li class="col-md-2 video mini">
+              <div class="area">
+                <div class="mask">
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div>
+                  <img src="images/video6.png" alt="video" class="img-responsive">
+                  <span class="duration">44:33</span>
+                </div>
+              </div>
+              <h4>Daft Punk - Get Lucky</h4>
+              <p><span>6 Days ago</span> By <a href="#">DaftPunkVEVO</a></p>
+              <p class="views">45 482 485 Views</p>
+            </li>
+          </ul>
+        </div> <!-- End main videos. -->
+      </div> <!-- End of row -->
+    </div> <!-- End of container fluid -->
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+          <div class="col-md-3 channel-bio">
+            <div class="channel-name"><img src="images/shoes.png" alt=""> NikeShoes</div>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="button">More Videos</a>
+          </div> <!-- End of channel bio -->
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/channel1.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/channel2.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/channel3.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+        </div>
+      </div> <!-- End of row -->
+    </div> <!-- End of container fluid -->
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+          <div class="col-md-3 channel-bio">
+            <div class="channel-name"><img src="images/shakira.png" alt=""> ShakiraVEVO</div>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="button">More Videos</a>
+          </div> <!-- End of channel bio -->
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/shakira1.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/shakira2.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/shakira3.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+        </div>
+      </div> <!-- End of row -->
+    </div> <!-- End of container fluid -->
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+          <div class="col-md-3 channel-bio">
+            <div class="channel-name"><img src="images/nike.png" alt=""> NikeFootball</div>
+            <hr>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#" class="button">More Videos</a>
+          </div> <!-- End of channel bio -->
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/football1.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/football2.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+          <div class="col-md-3 video">
+            <div class="area">
+              <div class="mask">
+                <div class="vertical-align">
+                  <i class="fa fa-play-circle"></i>
+                  <p>Play Now</p>
+                </div>
+                <img src="images/football3.png" alt="video" class="img-responsive">
+                <span class="duration">44:33</span>
+              </div>
+            </div>
+            <h4>Nike Air</h4>
+            <p><span>3 Days ago</span> By <a href="#">NikeShoes</a></p>
+            <p class="views">45 482 485 Views</p>
+          </div>
+        </div>
+      </div> <!-- End of row -->
+    </div> <!-- End of container fluid -->
+
+    <footer>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Press & Blog</a></li>
+        <li><a href="#">Copyright</a></li>
+        <li><a href="#">Creators and Partners</a></li>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Developers</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Policy & Safety</a></li>
+        <li><a href="#">Send Feeback</a></li>
+        <li><a href="#">Try Something New</a></li>
+      </ul>
+    </footer>
+
+    <h4>Copyright &copy 2017</h4> <!-- End Footer. -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
