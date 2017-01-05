@@ -13,13 +13,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="container-fluid">
-        <<div class="row">
+        <div class="row">
           <div class="col-md-2">
-            <a href="#"><img src="images/youtube.png" class="img-responsive logo"></a>
+            <a href="#"><img src="images/youtube.png" class="logo"></a>
             <a href="#" id="menu-toggle">
               <img src="images/menu.png" >
             </a>
@@ -30,7 +32,7 @@
             </form>
           </div> <!-- End search bar -->
           <div class="col-md-5">
-            <ul>
+            <ul id="user-info">
               <li><a href="#" class="button">Upload</a></li>
               <li>
                 <ul class="notifications">
@@ -52,13 +54,17 @@
       </div> <!-- End container fluid -->
     </header> <!-- End header -->
 
+    <hr>
+
     <div class="container-fluid">
       <div class="row">
-        <ul>
-          <li class="active">Homw</li>
+        <ul class="tabs">
+          <li class="active">Home</li>
           <li>Trending</li>
           <li>Suspcrition</li>
-        </ul>
+        </ul> <!-- End tabs -->
+
+        <hr>
 
         <div class="main-videos">
           <div class="col-md-4 video">
