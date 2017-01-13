@@ -18,6 +18,7 @@ p
 
 a:hoover {
   color: #c00198;
+  text-decoration: none;
 }
 
 span
@@ -339,4 +340,70 @@ p.views
 li.mini:nth-child(2)
 {
   margin-bottom: 30px;
+}
+
+.video h4
+{
+  margin-top: 15px;
+}
+
+.single-channel .video p {
+  margin-top: 7px;
+}
+
+/* Channel information section. */
+.channel-bio hr {
+  margin: 20px 0;
+}
+
+.channel-bio p {
+  text-align: justify;
+}
+
+.channel-bio .button {
+  margin-top: 10px;
+}
+
+.channel-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.channel-name img {
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 0 0 30px;
+  text-align: center;
+}
+
+footer li {
+  display: inline;
+  margin: 0 15px;
+}
+
+footer ul:nth-child(1) a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer ul:nth-child(2) {
+  margin: 20px 0;
+}
+
+footer ul:nth-child(2) a {
+  color: #282626;
+}
+
+footer li a:hover {
+  color: #e00918;
+  text-decoration: none;
+}
+
+footer h4 {
+  color: #aaa7a7;
+  font-weight: 300;
 }
