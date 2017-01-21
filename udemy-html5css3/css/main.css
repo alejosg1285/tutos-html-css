@@ -16,8 +16,14 @@ p
   line-height: 24px;
 }
 
-a:hoover {
+a:hover {
   color: #c00198;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 span
@@ -63,6 +69,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #e21725;
   color: #e21725;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 /* Header. */
@@ -204,6 +215,11 @@ input
 {
   color: #000;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 .tab .active
@@ -217,6 +233,7 @@ input
 /* Main content */
 .main-videos h2
 {
+  font-weight: 900;
   margin: 20px 0;
 }
 
@@ -243,16 +260,6 @@ p.views
   color: #343434;
 }
 
-.videos h2
-{
-  font-weight: 700;
-}
-
-.videos h4
-{
-  font-weight: 600;
-}
-
 .video p
 {
   color: #757a80;
@@ -266,6 +273,11 @@ p.views
   cursor: pointer;
   display: block;
   opacity: 100;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 .vertical-align
@@ -306,6 +318,7 @@ p.views
 
 .mini h4
 {
+  font-weight: 700;
   margin-top: 13px;
 }
 
@@ -339,4 +352,178 @@ p.views
 li.mini:nth-child(2)
 {
   margin-bottom: 30px;
+}
+
+.video h4
+{
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.single-channel .video p {
+  margin-top: 7px;
+}
+
+/* Channel information section. */
+.channel-bio hr {
+  margin: 20px 0;
+}
+
+.channel-bio p {
+  text-align: justify;
+}
+
+.channel-bio .button {
+  margin-top: 10px;
+}
+
+.channel-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.channel-name img {
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
+  padding: 0 0 30px;
+  text-align: center;
+}
+
+footer li {
+  display: inline;
+  margin: 0 15px;
+}
+
+footer ul:nth-child(1) a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer ul:nth-child(2) {
+  margin: 20px 0;
+}
+
+footer ul:nth-child(2) a {
+  color: #282626;
+}
+
+footer li a:hover {
+  color: #e00918;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+footer h4 {
+  color: #aaa7a7;
+  font-weight: 300;
+}
+
+/* Sidebar */
+.title
+{
+  color: #e21725;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sidebar ul
+{
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.sidebar li
+{
+  line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar a
+{
+  color: #828c95;
+  font-weight: 500;
+}
+
+.sidebar a:hover
+{
+  color: #e21725;
+  font-weight: 500;
+}
+
+.sidebar i
+{
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.sidebar #subs img
+{
+  margin-right: 15px;
+  width: 25px;
+}
+
+#playlist p
+{
+  font-size: 12px;
+  font-weight: 300;
+  margin-left: 35px;
+  margin-top: -15px;
+}
+
+#playlist i
+{
+  float: left;
+  margin-top: 15px;
+}
+
+#sidebar-wrapper
+{
+  background-color: #f7f8fa;
+  border-right: 1px solid #dbdee0;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  left: 0;
+  margin-bottom: -10px;
+  margin-left: -300px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  width: 300px;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+#sidebar-wrapper.active
+{
+  left: 300px;
+  width: 300px;
+}
+
+#menu-close
+{
+  padding: 7px 0;
+}
+
+#menu-close img
+{
+  width: 10px;
 }
