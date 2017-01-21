@@ -1,2 +1,2 @@
-# tutos-html-css
-Repositorio para los tutoriales de html y css
+# tutovideos
+Repositorio para videotutoriales de cualquier lenguaje de programación.
