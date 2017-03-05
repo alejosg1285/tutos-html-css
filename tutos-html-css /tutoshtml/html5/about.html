@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Pagina casi completa</title>
+    <link rel="stylesheet" href="css/estilos.css" charset="utf-8">
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1><span class="blue-text">Blue</span> Developer Directory</h1>
+        <h2>Find A Developer <span class="white-text">NOW</span></h2>
+      </header>
+
+      <nav>
+        <ul>
+            <li class="menuitem"><a href="index.html">Home</a></li>
+            <li class="menuitem"><a href="about.html">About Us</a></li>
+            <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+            <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <nav id="menu">
+        <h3>Links</h3>
+        <ul>
+              <li><a href="browse.html">SEO</a></li>
+              <li><a href="browse.html">PHP</a></li>
+              <li><a href="browse.html">Ajax</a></li>
+              <li><a href="browse.html">jQuery</a></li>
+              <li><a href="browse.html">Web design</a></li>
+              <li><a href="browse.html">Web Programming</a></li>
+              <li><a href="browse.html">Content Creation</a></li>
+              <li><a href="browse.html">Internet Marketing</a></li>
+              <li><a href="browse.html">XHTML Templates</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <h2>Aprendiendo HTML</h2>
+        <h3>¿Quien esta aprendiendo?</h3>
+        <p>
+          Esto lo debi aprender de verdad hace mucho tiempo, pero por andar haciendo lo mismo siempre y por descuido no lo hice.
+        </p>
+        <h3>¿Que habilidades esperas aprender?</h3>
+        <p>
+          Aprender a hacer paginas web bien hechas, con los estandares y buen diseño.
+        </p>
+        <!-- Agregar video a página web. -->
+        <video id="vid" width="500" height="350" controls>
+          <source src="video/ad.mp4" type="video/mp4">
+            No se puede reproducir.
+        </video>
+        <div style="width:400px">
+          <button type="button" onclick="playPause()">Play/Pause</button>
+          <button type="button" onclick="makeBig()">Big</button>
+          <button type="button" onclick="makeSmall()">Small</button>
+          <button type="button" onclick="makeNormal()">Normal</button>
+        </div>
+      </section>
+
+      <script src="js/video.js" charset="utf-8"></script>
+  </body>
+</html>
