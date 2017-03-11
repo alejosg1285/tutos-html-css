@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      label
+      {
+        display: inline-block;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; background-color:#1c478e; color:#fff">
+    <h1 style="margin:0px; background-color:#53324d;padding:5px;">Formulario html</h1>
+    <div style="padding-left:10px;">
+      <h3>Contacto</h3>
+      <p>
+        Formulario de contacto.
+      </p>
+      <form>
+        <p>
+          <label for="nombre">Nombre completo:</label>&nbsp;
+          <input type="text" name="nombre" value="" />
+        </p>
+        <p>
+          <label for="email">Correo electronico:</label>&nbsp;
+          <input type="text" name="email" value="" />
+        </p>
+        <p>
+          <label for="phone">Telefono:</label>&nbsp;
+          <input type="text" name="phone" value="" />
+        </p>
+        <p>
+          <label for="call">Mejor hora para llamar</label>&nbsp;
+          <input type="radio" name="call" value="morning" checked="checked" />Mañana
+          <input type="radio" name="call" value="afternoon" />Tarde
+          <input type="radio" name="call" value="evening" />Noche
+        </p>
+        <p>
+          <label for="budget">Presupuesto:</label>&nbsp;
+          <select type="list" name="budget">
+            <option>Seleccione uno</option>
+            <option value="100-500">$100 - $500</option>
+            <option value="500-1000">$500 - $1000</option>
+            <option value="1000-2000">$1000 - $2000</option>
+            <option value="2000">$2000+</option>
+            <option value="not sure">Sin definir</option>
+          </select>
+        </p>
+        <p>
+          <label>Servicios requeridos: (Seleccione los que aplique)</label>&nbsp;
+          <table>
+            <tr>
+              <td><input type="checkbox" name="service" value="html">HTML</td>
+              <td><input type="checkbox" name="service" value="php">PHP</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="service" value="asp">ASP</td>
+              <td><input type="checkbox" name="service" value="java">Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="service" value="c">C++</td>
+              <td><input type="checkbox" name="service" value="design">Design</td>
+            </tr>
+          </table>
+        </p>
+        <p>
+          <input type="submit" name="submit" value="Enviar formulario" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
