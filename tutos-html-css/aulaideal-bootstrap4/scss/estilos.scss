@@ -1,0 +1,570 @@
+//--------------
+// Patrones de colores.
+//--------------
+$texto: #111111;
+$principal: #12AFAF;
+$secundario: #009500;
+html {
+    font-size: 15px;
+}
+
+body {
+    color: $texto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.bienvenidos {
+    background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed !important;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.encabezado {
+    background: $texto;
+    color: #fff;
+    padding: .5rem 0;
+    transition: all 1s ease;
+}
+
+.fondo-menu {
+    background: #064c4c;
+    padding: 1rem 0;
+}
+
+.encabezado .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.encabezado .logo img {
+    height: auto;
+    width: 150px;
+}
+
+
+/* Estilos para botones buscar y menu */
+
+.boton-buscar,
+.boton-menu {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 .5rem;
+}
+
+.boton-buscar {
+    margin-left: auto;
+    margin-right: .8rem;
+}
+
+
+/* Estilo caja de busqueda */
+
+#bloque-buscar {
+    flex: 1 1 100%;
+}
+
+.contenedor-bloque-buscar {
+    display: flex;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.contenedor-bloque-buscar input[type="text"] {
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.contenedor-bloque-buscar button[type="submit"] {
+    background: $principal;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    flex: 0 1 auto;
+    padding: 0 1rem;
+}
+
+
+/* Estilo para menu desplegable. */
+
+#menu-principal {
+    flex: 1 1 100%;
+}
+
+#menu-principal ul {
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+#menu-principal ul a {
+    border-top: 1px solid #8c8888;
+    color: #fff;
+    display: block;
+    padding: .8rem 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+    color: $principal;
+}
+
+.texto-encabezado .btn-primary {
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: $principal;
+    border-color: transparent;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover {
+    background-color: $secundario;
+    border-color: transparent;
+}
+
+.texto-encabezado {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.texto-encabezado .display-4 {
+    margin-top: 4rem;
+}
+
+.flecha-bajar a {
+    animation: flecha-animada 2s ease-in-out infinite;
+    color: #fff;
+    display: inline-block;
+    font-size: 4rem;
+}
+
+@keyframes flecha-animada {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* Estilos para el bloque de agencia. */
+
+.agencia {
+    background: $principal;
+    color: #fff;
+}
+
+.agencia img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+
+/* Estilos para la sección de mejor elección. */
+
+.tu-mejor-eleccion h2 span {
+    color: $principal;
+}
+
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion ul li {
+    list-style: none;
+}
+
+.tu-mejor-eleccion ul li {
+    min-height: 11rem;
+}
+
+.tu-mejor-eleccion ul li .fa {
+    background: $secundario;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 3rem;
+    height: 7rem;
+    line-height: 7rem;
+    width: 7rem;
+}
+
+.contenedor-eleccion h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .8rem;
+    margin-top: .8rem;
+}
+
+
+/* Estilos para el bloque de servicios. */
+
+.servicios {
+    background: url("../images/fondo-servicios.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed !important;
+    color: #fff;
+}
+
+.servicios article {
+    align-items: center;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.servicios img {
+    flex: 0 1 60px;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.servicios h3 {
+    flex: 1 1 auto;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.servicios h3 a {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.servicios h3 a::after {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-size: 2rem;
+    left: 0;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    transition: all .5s ease;
+}
+
+.servicios h3 a:hover::after {
+    color: $principal;
+    left: -.5rem;
+    opacity: 1;
+}
+
+
+/* Estilos para sección de últimos proyectos. */
+
+.ultimos-proyectos a {
+    text-decoration: none;
+}
+
+.ultimos-proyectos a h4 {
+    color: $texto;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ultimos-proyectos .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ultimos-proyectos .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin: .3rem 0;
+}
+
+.ultimos-proyectos .owl-prev,
+.ultimos-proyectos .owl-next {
+    color: $principal;
+    font-size: 3rem;
+    margin: 0 .5rem;
+    transition: all .5s ease;
+}
+
+.ultimos-proyectos .owl-prev:hover,
+.ultimos-proyectos .owl-next:hover {
+    color: $secundario;
+}
+
+
+/* Estilos para el footer */
+
+.piedepagina {
+    background: $texto;
+    color: #fff;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.piedepagina .redes-sociales {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.piedepagina .redes-sociales a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 .5rem;
+    opacity: .7;
+}
+
+.piedepagina .redes-sociales a:hover {
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.ir-arriba {
+    bottom: 1rem;
+    color: rgb(18, 175, 175);
+    font-size: 3rem;
+    line-height: 0;
+    position: fixed;
+    right: 1rem;
+    text-decoration: none;
+    transition: all .5s ease;
+    z-index: 99999;
+}
+
+.ir-arriba:hover,
+.ir-arriba:focus {
+    color: #fff;
+    outline: 0;
+    text-decoration: none;
+}
+
+
+/* Paginas internas nosotros. */
+
+.paginas-internas .bienvenidos {
+    height: 50vh;
+}
+
+.paginas-internas .ruta {
+    background: $principal;
+    color: #fff;
+}
+
+.paginas-internas .ruta a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.paginas-internas .ruta a:hover {
+    text-decoration: none;
+}
+
+.paginas-internas .card {
+    border: 0;
+}
+
+.paginas-internas .card .card-header {
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.paginas-internas .card .card-header a {
+    background: $principal;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    padding: 1rem !important;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.paginas-internas .card .card-header a:hover,
+.paginas-internas .card .card-header a:visited {
+    background: $secundario;
+    color: #fff;
+}
+
+
+/* Pagina interna servicios. */
+
+.paginas-internas .lista-servicios {
+    background: $secundario;
+}
+
+.paginas-internas .lista-servicios .item-servicios {
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.paginas-internas .lista-servicios .item-servicios .fa {
+    color: $principal;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+}
+
+.paginas-internas .lista-servicios .item-servicios:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+
+/* Media queries. */
+
+@media (min-width: 768px) {
+    .encabezado .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #menu-principal {
+        display: block;
+        flex: 0 1 auto;
+        height: auto !important;
+        margin-left: auto;
+        order: 1;
+    }
+    #menu-principal ul {
+        display: flex;
+        margin: 0;
+    }
+    #menu-principal ul li a {
+        border-bottom: 4px solid transparent;
+        border-top: 0px;
+        margin: 0 .3rem;
+        padding: .8rem;
+        text-transform: capitalize;
+        transition: all .5s ease;
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover {
+        color: $principal;
+        border-bottom: 4px solid;
+    }
+    .boton-buscar {
+        margin-left: 1rem;
+        margin-right: 0;
+        order: 2;
+    }
+    #bloque-buscar {
+        order: 3;
+        position: absolute;
+        right: 1rem;
+        top: 2.8rem;
+        transition: all .5s ease;
+        width: 20rem;
+    }
+    /*Sección servicios*/
+    .servicios article {
+        flex-direction: column;
+    }
+    .servicios img {
+        flex: 0 1 150px;
+        margin-bottom: 1rem;
+        margin-right: 0;
+        transition: all 1s ease;
+    }
+    .servicios article:hover img {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    .servicios h3 a::after {
+        display: none;
+    }
+    .servicios h3 {
+        flex: 0 1 auto;
+        font-size: 1.5rem;
+        margin: 0 0 .5rem 0;
+    }
+    .servicios h3 a {
+        display: block;
+        width: 100%;
+    }
+    .servicios p {
+        width: 100%;
+    }
+    .servicios .btn-secondary,
+    .servicios article p {
+        margin-top: auto;
+    }
+    /*Pagina de servicios*/
+    .paginas-internas .lista-servicios .col-md-4 {
+        display: flex;
+    }
+    .paginas-internas .lista-servicios .item-servicios {
+        display: flex;
+        flex-direction: column;
+    }
+    .paginas-internas .lista-servicios .item-servicios .btn-primary,
+    .paginas-internas .lista-servicios .item-servicios p {
+        margin-top: auto;
+    }
+}
+
+@media (min-width:992px) {
+    html {
+        font-size: 16px;
+    }
+    .bienvenidos {
+        background: url("../images/fondo-encabezado-lg.jpg") no-repeat center top;
+        background-size: cover;
+    }
+    .tu-mejor-eleccion ul li {
+        display: flex;
+        min-height: 8rem;
+    }
+    .tu-mejor-eleccion ul li .fa {
+        flex: 0 1 auto;
+        font-size: 2.5rem;
+        height: 6rem;
+        line-height: 6rem;
+        margin-right: 1rem;
+        transition: all 1s ease;
+        width: 6rem;
+    }
+    .tu-mejor-eleccion ul li:hover .fa {
+        background: $principal;
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    .contenedor-eleccion {
+        flex: 1 0 0px;
+    }
+    .tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+    .tu-mejor-eleccion ul:first-child .fa {
+        margin-left: 1rem;
+        margin-right: 0;
+        order: 1;
+    }
+    .tu-mejor-eleccion ul li p {
+        font-size: .85rem;
+    }
+    .servicios {
+        background: url("../images/fondo-servicios-lg.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}
