@@ -168,12 +168,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704132041277_InitialCreate.cs" />
+    <Compile Include="Migrations\201704132041277_InitialCreate.Designer.cs">
+      <DependentUpon>201704132041277_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDbConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ContactWebContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,14 +191,44 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\colReorder.bootstrap.min.css" />
+    <Content Include="css\dataTables.bootstrap.min.css" />
+    <Content Include="css\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="css\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="css\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="css\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="css\images\ui-icons_004276_256x240.png" />
+    <Content Include="css\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\jquery-ui.structure.min.css" />
+    <Content Include="css\jquery-ui.theme.min.css" />
+    <Content Include="css\jquery.dataTables.min.css" />
+    <Content Include="css\jquery.dataTables_themeroller.css" />
+    <Content Include="css\responsive.bootstrap.min.css" />
+    <Content Include="css\responsive.dataTables.min.css" />
+    <Content Include="css\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\sort_asc.png" />
+    <Content Include="images\sort_asc_disabled.png" />
+    <Content Include="images\sort_both.png" />
+    <Content Include="images\sort_desc.png" />
+    <Content Include="images\sort_desc_disabled.png" />
+    <Content Include="js\lib\dataTables.bootstrap.min.js" />
+    <Content Include="js\lib\dataTables.colReorder.min.js" />
+    <Content Include="js\lib\dataTables.responsive.min.js" />
+    <Content Include="js\lib\jquery-3.1.1.slim.min.js" />
+    <Content Include="js\lib\jquery-ui.min.js" />
+    <Content Include="js\lib\jquery.dataTables.min.js" />
+    <Content Include="js\lib\responsive.bootstrap.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="js\lib\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="js\lib\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -234,10 +273,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Contacts\Create.cshtml" />
+    <Content Include="Views\Contacts\Delete.cshtml" />
+    <Content Include="Views\Contacts\Details.cshtml" />
+    <Content Include="Views\Contacts\Edit.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -246,6 +289,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704132041277_InitialCreate.resx">
+      <DependentUpon>201704132041277_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

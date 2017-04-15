@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cliente.udemyandroidcero.MainActivity"
+    tools:layout_editor_absoluteX="138dp"
+    tools:layout_editor_absoluteY="201dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/app_padding">
+
+        <EditText
+            android:id="@+id/textPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="71dp"
+            android:layout_toStartOf="@+id/btnPhone"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/textWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textPhone"
+            android:layout_below="@+id/textPhone"
+            android:layout_marginTop="41dp"
+            android:layout_toStartOf="@+id/btnWeb"
+            android:ems="10"
+            android:inputType="textWebEditText"
+            android:hint="@string/hint_url" />
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textWeb"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textPhone"
+            android:layout_marginEnd="21dp"
+            app:srcCompat="@android:drawable/stat_sys_phone_call" />
+
+        <ImageButton
+            android:id="@+id/btnWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textWeb"
+            android:layout_alignEnd="@+id/btnPhone"
+            android:layout_alignStart="@+id/btnPhone"
+            android:layout_alignTop="@+id/textWeb"
+            app:srcCompat="@android:drawable/ic_menu_view" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnCamara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+</RelativeLayout>
