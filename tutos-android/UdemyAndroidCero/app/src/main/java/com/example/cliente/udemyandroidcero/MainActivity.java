@@ -18,7 +18,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.cliente.udemyandroidcero.Activities.ListViewActivity;
+import com.example.cliente.udemyandroidcero.Activities.RecyclerViewActivity;
+
+public class MainActivity extends AppCompatActivity
+{
 
     private EditText textPhone, textWeb;
     private ImageButton btnCamara, btnPhone, btnWeb;
@@ -27,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private final int PICTURE_FROM_CAMERA = 50;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -39,22 +44,30 @@ public class MainActivity extends AppCompatActivity {
 
         //Evento del boton de telefono.
         btnPhone = (ImageButton) findViewById(R.id.btnPhone);
-        btnPhone.setOnClickListener(new View.OnClickListener() {
+        btnPhone.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 String phoneNumner = textPhone.getText().toString();
-                if (phoneNumner != null && !phoneNumner.isEmpty()) {
+                if(phoneNumner != null && !phoneNumner.isEmpty())
+                {
                     //Comprobr si la varsion de android es igual o superior a Marshmallow
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    {
                         //Comprobar si  ha aceptado anteriormente el permiso.
-                        if (CheckPermission(Manifest.permission.CALL_PHONE)) {
+                        if(CheckPermission(Manifest.permission.CALL_PHONE))
+                        {
                             makeCallPhone();
-                        } else {
+                        } else
+                        {
                             //No ha aceptado o es primer uso.
-                            if (!shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
+                            if(!shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE))
+                            {
                                 //Primer vez que usa la aplicación.
                                 requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, CALL_PHONE_CODE);
-                            } else {
+                            } else
+                            {
                                 //Denego anteriormente el permiso.
                                 Toast.makeText(MainActivity.this, "Por favor acepte la solicitud de permiso.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
@@ -66,20 +79,25 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         }
-                    } else {
+                    } else
+                    {
                         OlderVersion(phoneNumner);
                     }
-                } else {
+                } else
+                {
                     Toast.makeText(MainActivity.this, "Ingrese un número de celular", Toast.LENGTH_SHORT).show();
                 }
             }
 
-            private void OlderVersion(String phoneNumber) {
+            private void OlderVersion(String phoneNumber)
+            {
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
 
-                if (CheckPermission(Manifest.permission.CALL_PHONE)) {
+                if(CheckPermission(Manifest.permission.CALL_PHONE))
+                {
                     startActivity(intent);
-                } else {
+                } else
+                {
                     Toast.makeText(MainActivity.this, "Acceso denegado", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -87,11 +105,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Evento del boton de navegación web.
         btnWeb = (ImageButton) findViewById(R.id.btnWeb);
-        btnWeb.setOnClickListener(new View.OnClickListener() {
+        btnWeb.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 String url = textWeb.getText().toString();
-                if (url != null && !url.isEmpty()) {
+                if(url != null && !url.isEmpty())
+                {
                     Intent intent = new Intent();
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse("http://" + url));
@@ -116,9 +137,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnCamara = (ImageButton) findViewById(R.id.btnCamara);
-        btnCamara.setOnClickListener(new View.OnClickListener() {
+        btnCamara.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
 
                 startActivityForResult(intent, PICTURE_FROM_CAMERA);
@@ -128,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Crear menu lateral de la actionbar
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
         //return super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return true;
@@ -136,8 +160,10 @@ public class MainActivity extends AppCompatActivity {
 
     //Captura el elemento seleccionado en el menu.
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
             case R.id.opc1:
                 Intent opc1 = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(opc1);
@@ -148,26 +174,36 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(opc2);
                 return true;
             //break;
+            case R.id.opc3:
+                Intent opc3 = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(opc3);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
+    {
 
-        switch (requestCode) {
+        switch(requestCode)
+        {
             case CALL_PHONE_CODE:
                 String permission = permissions[0];
                 int result = grantResults[0];
 
-                if (permission.equals(Manifest.permission.CALL_PHONE)) {
-                    if (result == PackageManager.PERMISSION_GRANTED) {
+                if(permission.equals(Manifest.permission.CALL_PHONE))
+                {
+                    if(result == PackageManager.PERMISSION_GRANTED)
+                    {
                         makeCallPhone();
-                    } else {
+                    } else
+                    {
                         Toast.makeText(MainActivity.this, "Acceso denegado", Toast.LENGTH_SHORT).show();
                     }
-                } else {
+                } else
+                {
                     Toast.makeText(MainActivity.this, "Acceso denegado", Toast.LENGTH_SHORT).show();
                 }
                 break;
@@ -178,13 +214,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        switch(requestCode)
+        {
             case PICTURE_FROM_CAMERA:
-                if (resultCode == Activity.RESULT_OK) {
+                if(resultCode == Activity.RESULT_OK)
+                {
                     String result = data.toUri(0);
                     Toast.makeText(MainActivity.this, "Resultado: " + result, Toast.LENGTH_SHORT).show();
-                } else {
+                } else
+                {
                     Toast.makeText(MainActivity.this, "Se ha generado un error, intentelo de nuevo", Toast.LENGTH_SHORT).show();
                 }
                 break;
@@ -197,16 +237,19 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Abre la aplicación para realizar la llamada telefonica.
      */
-    private void makeCallPhone() {
+    private void makeCallPhone()
+    {
         String phoneNumber = textPhone.getText().toString();
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
             return;
         }
         startActivity(intent);
     }
 
-    private boolean CheckPermission(String permission) {
+    private boolean CheckPermission(String permission)
+    {
         int result = this.checkCallingOrSelfPermission(permission);
         return result == PackageManager.PERMISSION_GRANTED;
     }

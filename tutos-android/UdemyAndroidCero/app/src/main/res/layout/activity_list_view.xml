@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/app_padding"
-    tools:context="com.example.cliente.udemyandroidcero.ListViewActivity">
+    tools:context="com.example.cliente.udemyandroidcero.Activities.ListViewActivity">
 
     <GridLayout
         android:layout_width="match_parent"

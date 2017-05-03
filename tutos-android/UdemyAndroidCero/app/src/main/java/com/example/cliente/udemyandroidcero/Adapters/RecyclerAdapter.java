@@ -1,14 +1,16 @@
 package com.example.cliente.udemyandroidcero.Adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cliente.udemyandroidcero.Models.Movie;
 import com.example.cliente.udemyandroidcero.R;
-
-import org.w3c.dom.Text;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -17,54 +19,62 @@ import java.util.List;
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    private List<String> names;
+    private List<Movie> movies;
     private int layout;
-    private OnItemClickListener onItemClickListener;
+    private OnItemClickListener itemClickListener;
 
-    public RecyclerAdapter(List<String> names, int layout, OnItemClickListener listener) {
-        this.names = names;
+    private Context context;
+
+    public RecyclerAdapter(List<Movie> movies, int layout, OnItemClickListener listener) {
+        this.movies = movies;
         this.layout = layout;
-        this.onItemClickListener = listener;
+        this.itemClickListener = listener;
     }
 
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(layout, parent, false);
+        context=parent.getContext();
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.bind(names.get(position), onItemClickListener);
+        holder.bind(movies.get(position), itemClickListener);
     }
 
     @Override
     public int getItemCount() {
-        return names.size();
+        return movies.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textViewName;
+        public ImageView imageViewPoster;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            textViewName = (TextView) itemView.findViewById(R.id.textViewName);
+            textViewName = (TextView) itemView.findViewById(R.id.textViewTitle);
+            imageViewPoster=(ImageView)itemView.findViewById(R.id.imageViewPoster);
         }
 
-        public void bind(final String name, final OnItemClickListener listener) {
-            this.textViewName.setText(name);
+        public void bind(final Movie movie, final OnItemClickListener listener) {
+            //Renderizar los datos en la vista.
+            Picasso.with(context).load(movie.getPoster()).fit().into(imageViewPoster);
+            this.textViewName.setText(movie.getTitle());
+            //this.imageViewPoster.setImageResource(movie.getPoster());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onItemClik(name, getAdapterPosition());
+                    listener.onItemClik(movie, getAdapterPosition());
                 }
             });
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClik(String name, int position);
+        void onItemClik(Movie movie, int position);
     }
 }

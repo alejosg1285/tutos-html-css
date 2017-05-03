@@ -1,4 +1,4 @@
-package com.example.cliente.udemyandroidcero;
+package com.example.cliente.udemyandroidcero.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.cliente.udemyandroidcero.Adapters.MyAdapter;
+import com.example.cliente.udemyandroidcero.MainActivity;
+import com.example.cliente.udemyandroidcero.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cliente.udemyandroidcero">
-
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    package="com.example.alejosg.labandroidudemy">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_checklist"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_checklist"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -18,8 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.ListViewActivity" />
-        <activity android:name=".Activities.RecyclerViewActivity"></activity>
+        <activity
+            android:name=".Activities.FruitWorld"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
