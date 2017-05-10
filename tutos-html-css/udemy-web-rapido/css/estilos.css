@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: '../fonts/Ubuntu-Regular.ttf';
+}
+
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: '../fonts/Ubuntu-Medium.ttf';
+}
+
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: '../fonts/Ubuntu-Light.ttf';
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: '../fonts/Ubuntu-Bold.ttf';
+}
+
+body {
+    padding-top: 50px;
+}
+
+
+/*Tipografía*/
+
+h1 {
+    font-family: 'Ubuntu-Bold', sans-serif;
+    font-size: 3.5em;
+}
+
+h2,
+h3 {
+    font-family: 'Ubuntu-Regular', sans-serif;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-family: 'Ubuntu-Light', sans-serif;
+    font-size: 1.3em;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: #661515;
+    font-family: 'Ubuntu-Light', sans-serif;
+}
+
+.navbar-brand>img {
+    margin-top: -15px;
+    width: 50px;
+}
+
+.nav>li {
+    text-align: center;
+}
+
+.navbar-toggle {
+    background-color: #ffddb1;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>li>a>.fa {
+    font-size: 30px;
+}
+
+
+/* Seccion encabezado. */
+
+#constructura-wrapper {
+    background: url("../images/wall.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#constructura-wrapper .cotiza {
+    padding: 15px;
+}
+
+#constructura-wrapper #frase-wrapper {
+    background-color: rgba(102, 21, 21, 0.5);
+}
+
+#constructura-wrapper #frase-wrapper h3 {
+    color: #fff;
+}
+
+#constructura-wrapper #frase-wrapper footer h3 {
+    color: #000;
+    font-weight: 700;
+}
+
+
+/* Sección nosotros .*/
+
+#nosotros-wrapper {
+    background-color: #ffddb1;
+    color: #661515;
+    padding: 15px;
+    text-align: center;
+}
+
+#nosotros-wrapper .fa-lg {
+    font-size: 5em;
+}
+
+
+/* Sección contacto. */
+
+#contacto-wrapper {
+    background: url("../images/contacto-sm.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+#contacto-wrapper h3 {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* Seccion footer. */
+
+#footer-wrapper {
+    background-color: #661515;
+    color: #fff;
+    font-family: 'Ubuntu-Light', sans-serif;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* Boones */
+
+#constructura-wrapper .btn-default,
+#contacto-wrapper .btn-default {
+    background-color: #661515;
+    border-color: transparent;
+    color: #fff;
+}
+
+
+/* Media queries. */
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 970px) {
+    #constructura-wrapper .cotiza img {
+        width: 80%;
+    }
+    #contacto-wrapper .form-horizontal span {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1170px) {
+    #constructura-wrapper .cotiza img {
+        width: 70%;
+    }
+}

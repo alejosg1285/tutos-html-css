@@ -1,0 +1,125 @@
+﻿@model IEnumerable<ContactWeb.Models.Contact>
+
+@{
+    ViewBag.Title = "Mis Contactos";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="your_contacts" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Neightborhood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birthday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Neightborhood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => item.UserId)
+        </td>
+    </tr>
+}
+
+</table>
+
+<h3>Welcome</h3>
+@ViewBag.UserName - @ViewBag.UserId
+
+<h3>Welcome</h3>
+@ViewData["UserName"] - @ViewData["UserId"]
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#your_contacts").dataTable({
+                "pagingType": "full_numbers"
+                , "scrollY": "600px"
+                , "columnDefs": [
+                    { "width": "45px", "targets": [0] }
+                    , { "width": "45px", "targets": 1 }
+                    , { "width": "45px", "targets": 2 }
+                    , { "width": "45px", "targets": 3 }
+                    , { "width": "45px", "targets": 4 }
+                    , { "width": "45px", "targets": 5 }
+                    , { "width": "45px", "targets": 6 }
+                    , { "width": "45px", "targets": 7 }
+                    , { "width": "45px", "targets": 8 }
+                    , { "width": "45px", "targets": 9 }
+                ]
+                , "order": [[1, "desc"]]
+                , "dom": '<"wrapper"Rlfrtip>'
+                , "stateSave": "true"
+                , "lengthMenu": [[-1, 10, 20, 50, 100], ["All", 10, 20, 50, 100]]
+            });
+        });
+    </script>
+}

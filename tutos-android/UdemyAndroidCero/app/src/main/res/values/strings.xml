@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Udemy Android Cero</string>
+    <string name="ingrese_una_url">hint_url</string>
+    <string name="hint_url">Ingrese una url</string>
+</resources>

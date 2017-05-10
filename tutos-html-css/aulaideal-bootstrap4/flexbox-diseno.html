@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 80%;
+            margin: 1rem auto;
+        }
+        
+        header {
+            align-items: center;
+            background: #03A9F4;
+            display: flex;
+            flex: 1 1 100%;
+            justify-content: space-between;
+            padding: 1rem;
+            order: 0;
+        }
+        
+        header a {
+            flex: 0 1 180px;
+        }
+        
+        header a img {
+            width: 100%;
+        }
+        
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header nav ul li a {
+            background: #536DFE;
+            border-radius: 5px;
+            color: #FFFFFF;
+            display: block;
+            margin: 0 .3rem;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        
+        .contenido {
+            background: #B3E5FC;
+            flex: 3 1 0px;
+            padding: 1rem;
+            order: 2;
+        }
+        
+        .lateral-1,
+        .lateral-2 {
+            background: #017BB0;
+            flex: 1 1 0px;
+            padding: 1rem;
+        }
+        
+        .lateral-1 {
+            order: 1;
+        }
+        
+        .lateral-2 {
+            order: 3;
+        }
+        
+        footer {
+            background: #212121;
+            color: #FFFFFF;
+            flex: 1 1 100%;
+            order: 4;
+            text-align: center;
+        }
+        
+        @media (max-width: 1000px) {
+            .contenedor {
+                max-width: 90%
+            }
+        }
+        
+        @media (max-width: 850px) {
+            header {
+                flex-direction: column;
+            }
+            header a {
+                align-self: normal;
+                flex: 0 1 auto;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .lateral-1,
+            .lateral-2,
+            .contenido {
+                flex: 1 1 100%;
+            }
+        }
+        
+        @media (max-width: 590px) {
+            .contenedor {
+                margin: 0;
+                max-width: 100%
+            }
+            header {
+                align-items: stretch;
+                justify-content: center;
+                padding: 1rem 0 0 0;
+            }
+            header a {
+                /*align-self: center;*/
+                padding: 1rem;
+            }
+            header nav ul {
+                flex-direction: column;
+            }
+            header nav ul li a {
+                border-radius: 0px;
+                margin: 0;
+                border: 1px solid #0288D1;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <a href="#"><img src="images/logo.svg" alt="Logo del sitio"></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Enlace 1</a>
+                    </li>
+                    <li>
+                        <a href="">Enlace 2</a>
+                    </li>
+                    <li>
+                        <a href="">Enlace 3</a>
+                    </li>
+                    <li>
+                        <a href="">Enlace 4</a>
+                    </li>
+                    <li>
+                        <a href="">Enlace 5</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <article class="contenido">
+            <h1>Contenido Principal</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+        </article>
+
+        <aside class="lateral-1">
+            <h2>Lateral 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+        </aside>
+
+        <aside class="lateral-2">
+            <h2>Lateral 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga iste cum asperiores at dolores quasi pariatur, reprehenderit cumque harum temporibus obcaecati est eum ratione impedit a nulla vero quia.</p>
+        </aside>
+
+        <footer>
+            <p>Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
