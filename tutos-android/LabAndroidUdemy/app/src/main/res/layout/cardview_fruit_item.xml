@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardFruit"
-    android:layout_width="match_parent"
-    android:layout_height="180dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:orientation="vertical"
-    card_view:cardBackgroundColor="@color/primaryLight">
+<android.support.v7.widget.CardView android:id="@+id/cardFruit"
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:orientation="vertical"
+                                    card_view:cardBackgroundColor="@color/primaryLight">
 
-    <ImageView
-        android:id="@+id/imgFruit"
-        android:layout_width="match_parent"
-        android:layout_height="140dp" />
-
-    <TextView
-        android:id="@+id/txtNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="45px"
-        android:gravity="center"
-        android:text="fruta"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/txtOrigin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:text="origen"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        <ImageView
+            android:id="@+id/imgFruit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.40"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.60"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:text="fruta"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+            <TextView
+                android:id="@+id/txtOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="descripcion"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+        </LinearLayout>
+    </LinearLayout>
 </android.support.v7.widget.CardView>

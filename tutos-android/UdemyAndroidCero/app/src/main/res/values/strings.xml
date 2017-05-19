@@ -2,4 +2,8 @@
     <string name="app_name">Udemy Android Cero</string>
     <string name="ingrese_una_url">hint_url</string>
     <string name="hint_url">Ingrese una url</string>
+    <string name="note_title">Note title</string>
+    <string name="delete_all">Delete all</string>
+    <string name="edit_name">Edit Name</string>
+    <string name="delete">Delete</string>
 </resources>

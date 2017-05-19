@@ -7,18 +7,20 @@ package com.example.alejosg.labandroidudemy.Models;
 public class Fruta
 {
     private String nombre;
-    private String origen;
-    private int icono;
+    private String descripcion;
+    private int imgIcono;
+    private int imgBackgroud;
 
     public Fruta()
     {
     }
 
-    public Fruta(String nombre, String origen, int icono)
+    public Fruta(String nombre, String descripcion, int imgIcono, int imgBackgroud)
     {
         this.nombre = nombre;
-        this.origen = origen;
-        this.icono = icono;
+        this.descripcion = descripcion;
+        this.imgIcono = imgIcono;
+        this.imgBackgroud = imgBackgroud;
     }
 
     public String getNombre()
@@ -31,23 +33,33 @@ public class Fruta
         this.nombre = nombre;
     }
 
-    public String getOrigen()
+    public String getDescripcion()
     {
-        return origen;
+        return descripcion;
     }
 
-    public void setOrigen(String origen)
+    public void setDescripcion(String descripcion)
     {
-        this.origen = origen;
+        this.descripcion = descripcion;
     }
 
-    public int getIcono()
+    public int getImgIcono()
     {
-        return icono;
+        return imgIcono;
     }
 
-    public void setIcono(int icono)
+    public void setImgIcono(int imgIcono)
     {
-        this.icono = icono;
+        this.imgIcono = imgIcono;
+    }
+
+    public int getImgBackgroud()
+    {
+        return imgBackgroud;
+    }
+
+    public void setImgBackgroud(int imgBackgroud)
+    {
+        this.imgBackgroud = imgBackgroud;
     }
 }

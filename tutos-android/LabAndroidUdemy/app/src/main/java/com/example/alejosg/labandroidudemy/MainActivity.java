@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.alejosg.labandroidudemy.Activities.CityActivity;
 import com.example.alejosg.labandroidudemy.Activities.FruitWorld;
 
 public class MainActivity extends AppCompatActivity
 {
     private Button btnFruit;
+    private Button btnRealm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +30,16 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 Intent intent = new Intent(MainActivity.this, FruitWorld.class);
+                startActivity(intent);
+            }
+        });
+        btnRealm = (Button) findViewById(R.id.labCity);
+        btnRealm.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, CityActivity.class);
                 startActivity(intent);
             }
         });

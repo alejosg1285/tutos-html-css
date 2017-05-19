@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.cliente.udemyandroidcero.Activities.ListViewActivity;
+import com.example.cliente.udemyandroidcero.Activities.RealmActivity;
 import com.example.cliente.udemyandroidcero.Activities.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -177,6 +178,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.opc3:
                 Intent opc3 = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(opc3);
+                return true;
+            case R.id.opc4:
+                Intent intent=new Intent(MainActivity.this, RealmActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
