@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.cliente.udemyandroidcero.Activities.FragmentActivity;
 import com.example.cliente.udemyandroidcero.Activities.ListViewActivity;
 import com.example.cliente.udemyandroidcero.Activities.RealmActivity;
 import com.example.cliente.udemyandroidcero.Activities.RecyclerViewActivity;
@@ -180,8 +181,12 @@ public class MainActivity extends AppCompatActivity
                 startActivity(opc3);
                 return true;
             case R.id.opc4:
-                Intent intent=new Intent(MainActivity.this, RealmActivity.class);
+                Intent intent = new Intent(MainActivity.this, RealmActivity.class);
                 startActivity(intent);
+                return true;
+            case R.id.opc5:
+                Intent opc5 = new Intent(MainActivity.this, FragmentActivity.class);
+                startActivity(opc5);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

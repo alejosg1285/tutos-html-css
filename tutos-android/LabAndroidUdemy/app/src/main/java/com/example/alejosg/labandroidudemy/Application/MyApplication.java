@@ -1,6 +1,7 @@
 package com.example.alejosg.labandroidudemy.Application;
 
 import android.app.Application;
+import android.os.SystemClock;
 
 import com.example.alejosg.labandroidudemy.Models.City;
 
@@ -30,6 +31,9 @@ public class MyApplication extends Application
         Realm realm = Realm.getDefaultInstance();
         CityId = getIdByTable(realm, City.class);
         realm.close();
+
+        //Pausar el sistema para visualizar el splash por 3 segundos.
+        SystemClock.sleep(3000);
     }
 
     private void setUpRealmConfig()

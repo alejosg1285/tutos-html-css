@@ -19,4 +19,7 @@
     <item
         android:id="@+id/opc4"
         android:title="Realm"/>
+    <item
+        android:id="@+id/opc5"
+        android:title="Fragments"></item>
 </menu>
