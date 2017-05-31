@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.alejosg.labandroidudemy.Activities.CityActivity;
+import com.example.alejosg.labandroidudemy.Activities.FragmentsActivity;
 import com.example.alejosg.labandroidudemy.Activities.FruitWorld;
 import com.example.alejosg.labandroidudemy.Activities.LoginActivity;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity
     private Button btnFruit;
     private Button btnRealm;
     private Button btnPrefs;
+    private Button btnFragm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -51,13 +53,23 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        btnPrefs=(Button)findViewById(R.id.labPrefs);
+        btnPrefs = (Button) findViewById(R.id.labPrefs);
         btnPrefs.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Intent intent=new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnFragm = (Button) findViewById(R.id.labFragments);
+        btnFragm.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(MainActivity.this, FragmentsActivity.class);
                 startActivity(intent);
             }
         });

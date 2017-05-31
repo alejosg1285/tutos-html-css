@@ -20,6 +20,8 @@ import android.widget.Toast;
 
 import com.example.cliente.udemyandroidcero.Activities.FragmentActivity;
 import com.example.cliente.udemyandroidcero.Activities.ListViewActivity;
+import com.example.cliente.udemyandroidcero.Activities.LoginActivity;
+import com.example.cliente.udemyandroidcero.Activities.PicassoActivity;
 import com.example.cliente.udemyandroidcero.Activities.RealmActivity;
 import com.example.cliente.udemyandroidcero.Activities.RecyclerViewActivity;
 
@@ -164,30 +166,38 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
+        Intent intent;
         switch(item.getItemId())
         {
             case R.id.opc1:
-                Intent opc1 = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(opc1);
+                intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
                 return true;
             //break;
             case R.id.opc2:
-                Intent opc2 = new Intent(MainActivity.this, ListViewActivity.class);
-                startActivity(opc2);
+                intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
                 return true;
             //break;
             case R.id.opc3:
-                Intent opc3 = new Intent(MainActivity.this, RecyclerViewActivity.class);
-                startActivity(opc3);
+                intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.opc4:
-                Intent intent = new Intent(MainActivity.this, RealmActivity.class);
+                intent = new Intent(MainActivity.this, RealmActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.opc5:
-                Intent opc5 = new Intent(MainActivity.this, FragmentActivity.class);
-                startActivity(opc5);
+                intent = new Intent(MainActivity.this, FragmentActivity.class);
+                startActivity(intent);
                 return true;
+            case R.id.opc6:
+                intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.opc7:
+                intent = new Intent(MainActivity.this, PicassoActivity.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }

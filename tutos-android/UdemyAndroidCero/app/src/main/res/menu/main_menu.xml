@@ -22,4 +22,10 @@
     <item
         android:id="@+id/opc5"
         android:title="Fragments"></item>
+    <item
+        android:id="@+id/opc6"
+        android:title="SharedPrefs"/>
+    <item
+        android:id="@+id/opc7"
+        android:title="Picasso"/>
 </menu>

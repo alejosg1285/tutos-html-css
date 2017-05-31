@@ -1,6 +1,7 @@
 package com.example.cliente.udemyandroidcero.App;
 
 import android.app.Application;
+import android.os.SystemClock;
 
 import com.example.cliente.udemyandroidcero.Models.Board;
 import com.example.cliente.udemyandroidcero.Models.Note;
@@ -25,6 +26,9 @@ public class MyApplication extends Application
     public void onCreate()
     {
         super.onCreate();
+
+        //Retraza 3sg la carga de la aplicación para ver el splash, si se tuviera una carga excesiva durante la carga de la primera actvidad no seria necesario.
+        SystemClock.sleep(3000);
 
         Realm.init(this);
         setUpRealmConfig();

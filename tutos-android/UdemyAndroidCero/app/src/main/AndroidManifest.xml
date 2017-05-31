@@ -12,13 +12,7 @@
         android:roundIcon="@mipmap/ic_checklist"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Activities.ListViewActivity"/>
         <activity android:name=".Activities.RecyclerViewActivity"/>
         <activity android:name=".Activities.RealmActivity"/>
@@ -26,6 +20,21 @@
         <activity android:name=".Activities.FragmentActivity">
         </activity>
         <activity android:name=".Activities.DetailsActivity">
+        </activity>
+        <activity android:name=".Activities.LoginActivity">
+        </activity>
+        <activity android:name=".Activities.SessionActivity">
+        </activity>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.PicassoActivity">
         </activity>
     </application>
 
