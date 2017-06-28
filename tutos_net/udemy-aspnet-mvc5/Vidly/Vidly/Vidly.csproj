@@ -195,15 +195,47 @@
     <Compile Include="Migrations\201706241930361_AddAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201706241930361_AddAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706250200069_AddNameColumnToMembershipType.cs" />
+    <Compile Include="Migrations\201706250200069_AddNameColumnToMembershipType.Designer.cs">
+      <DependentUpon>201706250200069_AddNameColumnToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706250203365_UpdateMembershipTypes.cs" />
+    <Compile Include="Migrations\201706250203365_UpdateMembershipTypes.Designer.cs">
+      <DependentUpon>201706250203365_UpdateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706250215275_AddBithdayColumnToCustomer.cs" />
+    <Compile Include="Migrations\201706250215275_AddBithdayColumnToCustomer.Designer.cs">
+      <DependentUpon>201706250215275_AddBithdayColumnToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706250242511_AddGenre.cs" />
+    <Compile Include="Migrations\201706250242511_AddGenre.Designer.cs">
+      <DependentUpon>201706250242511_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706251728287_AddColumnsInMovie.cs" />
+    <Compile Include="Migrations\201706251728287_AddColumnsInMovie.Designer.cs">
+      <DependentUpon>201706251728287_AddColumnsInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706251729499_PopulateGenre.cs" />
+    <Compile Include="Migrations\201706251729499_PopulateGenre.Designer.cs">
+      <DependentUpon>201706251729499_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706251819577_ModifyMovies.cs" />
+    <Compile Include="Migrations\201706251819577_ModifyMovies.Designer.cs">
+      <DependentUpon>201706251819577_ModifyMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-flatly.css" />
@@ -264,6 +296,11 @@
     <Content Include="Views\Movie\Random.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,6 +328,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706241930361_AddAnnotationsToCustomerName.resx">
       <DependentUpon>201706241930361_AddAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250200069_AddNameColumnToMembershipType.resx">
+      <DependentUpon>201706250200069_AddNameColumnToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250203365_UpdateMembershipTypes.resx">
+      <DependentUpon>201706250203365_UpdateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250215275_AddBithdayColumnToCustomer.resx">
+      <DependentUpon>201706250215275_AddBithdayColumnToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250242511_AddGenre.resx">
+      <DependentUpon>201706250242511_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706251728287_AddColumnsInMovie.resx">
+      <DependentUpon>201706251728287_AddColumnsInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706251729499_PopulateGenre.resx">
+      <DependentUpon>201706251729499_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706251819577_ModifyMovies.resx">
+      <DependentUpon>201706251819577_ModifyMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
