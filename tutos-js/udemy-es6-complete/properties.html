@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var doSomething = function() {};
+        console.log(doSomething.name);
+
+        function doAnotherThing() {}
+        console.log(doAnotherThing.name);
+
+        //El nombre de la funcion prevalece sobre el nombre de la variable.
+        var doMyThing = function doMyThingAgain() {};
+        console.log(doMyThing.name);
+
+        var person = {
+            get firstName() {
+                return "Orion";
+            },
+            sayName: function() {
+                console.log(this.name);
+            }
+        }
+        console.log(person.sayName.name);
+
+        //new meta
+        function Person(name) {
+            if (typeof new.target === Person)
+                return this.name = name;
+            else
+                throw new Error("You must use \"new Person\"");
+        }
+        var person = new Person("Orion");
+        console.log(person);
+
+    </script>
+</body>
+
+</html>

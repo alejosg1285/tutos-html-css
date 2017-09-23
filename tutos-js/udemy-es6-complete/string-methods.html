@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var msg = "Hello World!";
+
+        //Verifica si la cadena inicia con una subcadena.
+        console.log(msg.startsWith("Hello"));
+        console.log(msg.startsWith("hello"));
+        console.log(msg.startsWith("o", 4));
+        //Verifica si la cadena finaliza con una subcadena.
+        console.log(msg.endsWith("World!"));
+        console.log(msg.endsWith("world!"));
+        console.log(msg.endsWith("o", 8));
+        //Verifica si la cadena incluye una subcadena.
+        console.log(msg.includes("ello"));
+        console.log(msg.includes("allo"));
+        console.log(msg.includes("o", 8));
+        //Repite la cadena x cantidad de veces.
+        console.log("x".repeat(3));
+        console.log(msg.repeat(2));
+
+        console.log('------');
+
+        var mess = `Hello World!`;
+
+        console.log(mess);
+        console.log(typeof mess);
+        console.log(mess.length);
+
+        //Escapar comillas
+        mess = `\`Hello\` World!`;
+        console.log(mess);
+        //Texto con salto de línea.
+        mess = `\`Hello\` \n\ World!`;
+        console.log(mess);
+        //Texto con salto de línea sin escapar caracteres.
+        mess = `Hello 
+World!`;
+        console.log(mess);
+        //La funcion trim elimina el primer salto de linea, ya que son espacios.
+        var html = `
+<div>
+    <h1>Allo</h1>
+</div>
+`.trim();
+        console.log(html);
+        //Sustituye el valor de una variable en otra, funciona con esta comilla. no con doble o simple
+        var name = "Alejandro",
+            mess = `Hello, ${name}`;
+        console.log(mess);
+
+        var count = 10,
+            price = 0.25,
+            mess = `${count} items costs $${(count * price).toFixed(2)}`;
+        console.log(mess);
+        //Sustituciones anidadas.
+        var name = "Alejandro",
+            mess = `Hello, ${
+        `my name is ${name}`
+        }.`;
+        console.log(mess);
+
+    </script>
+</body>
+
+</html>

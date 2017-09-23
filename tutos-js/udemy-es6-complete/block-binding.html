@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getValue(condition) {
+            var count = 10;
+            const maxValue = 100; //Al igual que en todos los lenguajes, no se puede cambiar el valor.
+
+            const person = {
+                name: "Alejandro"
+            }
+            console.log(person);
+
+            person.name = "Orion";
+            console.log(person);
+
+            if (condition) {
+                //Las variables definidas con let solo existen en el bloque donde se definieron, entre las llaves, no incluye el else.
+                let count = 12;
+                let myValue = "Alejandro";
+                return myValue;
+            } else
+                return null;
+        }
+
+        console.log(getValue(false));
+
+        var funcs = [];
+        var object = {
+            a: true,
+            b: "Orion",
+            c: 85
+        };
+
+        for (let key in object) {
+            funcs.push(function() {
+                console.log(key);
+            });
+        }
+
+        funcs.forEach(function(func) {
+            func();
+        });
+
+    </script>
+</body>
+
+</html>

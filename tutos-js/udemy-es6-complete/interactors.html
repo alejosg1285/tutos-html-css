@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Iterators
+        let createdIterator = function* newIterator(items) {
+            /*yield 1;
+            yield 2;
+            yield 3;*/
+
+            for (let i = 0; items.length; i++) {
+                yield items[i];
+            }
+        }
+
+        var iteractor = createdIterator([1, 2, 3]);
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+
+        /*let obj = {
+            createGenerator: function*(items) {
+                for (let i = 0; items.length; i++) {
+                    yield items[i];
+                }
+            }
+        };*/
+        let obj = {
+            * createGenerator(items) {
+                for (let i = 0; items.length; i++) {
+                    yield items[i];
+                }
+            }
+        };
+
+        iteractor = createdIterator([1, 2, 3]);
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+
+        //for-of loop
+        let values = [1, 2, 3];
+        for (let num of values) {
+            console.log(num);
+        }
+
+        iteractor = values[Symbol.iterator]();
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+
+        function isIterable(object) {
+            return typeof object[Symbol.iterator] === "function";
+        }
+        console.log(isIterable(values));
+
+        let collection = {
+            items: [],
+            *[Symbol.iterator]() {
+                for (let item of this.items) {
+                    yield item;
+                }
+            }
+        };
+
+        collection.items.push(1);
+        collection.items.push(3);
+        collection.items.push(5);
+
+        for (let x of collection) {
+            console.log(x);
+        }
+
+        function* createNewIterator() {
+            let first = yield 1;
+            let second;
+            try {
+                yield first + 2;
+            } catch (ex) {
+                second = 9;
+            }
+            yield second + 3;
+        }
+        iteractor = createNewIterator();
+        console.log(iteractor.next());
+        console.log(iteractor.next(3));
+        console.log(iteractor.throw(new Error("Error procesanado")));
+        console.log(iteractor.next(9));
+        console.log(iteractor.next());
+
+        //Delegating generators
+        function* createNumberIterator() {
+            yield 1;
+            yield 2;
+        }
+
+        function* createColourIterator() {
+            yield "red";
+            yield "blue";
+        }
+
+        function* createCombinedIterator() {
+            yield* createNumberIterator();
+            yield* createColourIterator();
+            yield "Marie";
+        }
+        iteractor = createCombinedIterator();
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+
+        //Delegating generators with return value.
+        function* createReturnNumberIterator() {
+            yield 1;
+            yield 2;
+            return 3;
+        }
+
+        function* createRepeatingIterator(count) {
+            for (let i = 0; i < count; i++) {
+                yield "Repeat: " + i;
+            }
+        }
+
+        function* createCombinedIterator() {
+            let result = yield* createReturnNumberIterator();
+            yield* createRepeatingIterator(result);
+        }
+        iteractor = createCombinedIterator();
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+        console.log(iteractor.next());
+
+    </script>
+</body>
+
+</html>
