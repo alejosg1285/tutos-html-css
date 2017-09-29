@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Parametros por defecto.
+        function makeRequest(url, timeout, callback) {
+            //Definir los valores por defecto.
+            timeout = (typeof timeout !== "undefined") ? timeout : 3000;
+            callback = (typeof callback !== "undefined") ? callback : function() {};
+
+            //cuerpo de la funcion.
+        }
+
+        //Inicializar durante la declaración.
+        function makeRequest(url, timeout = 3000, callback = function() {}) {
+            //cuerpo de la funcion.
+        }
+
+        mixArguments("a", "b");
+
+        function mixArguments(first, second) {
+            'use strict';
+
+            console.log(first === arguments[0]);
+            console.log(second === arguments[1]);
+            first = "c";
+            second = "d";
+            console.log(first === arguments[0]);
+            console.log(second === arguments[1]);
+        }
+
+
+        function getValue() {
+            return 5;
+        }
+
+        function add(first, second = getValue()) {
+            return first + second;
+        }
+        console.log(add(1, 1));
+        console.log(add(1));
+
+        function add2(first, second = first) {
+            return first + second;
+        }
+        console.log(add2(1, 2));
+        console.log(add2(1));
+
+        function getValue3(myValue) {
+            return myValue + 5;
+        }
+
+        function add3(first, second = getValue(first)) {
+            return first + second;
+        }
+        console.log(add3(1, 4));
+        console.log(add3(1));
+
+        //Rest parameters
+        console.log('rest parameters-----');
+
+        function add4(...myRest) {
+            let [a, b, c] = myRest;
+            console.log(myRest.length);
+
+            return a + b + c;
+        }
+        console.log(add4(1, 2, 3));
+
+        function multiply(multiplier, ...args) {
+            return args.map(function(element) {
+                return element * multiplier;
+            });
+        }
+        var multi = multiply(2, 1, 2, 3);
+        console.log(multi);
+
+        console.log('spread parameters-----');
+        let values = [10, 20, 30, 40, 50];
+        console.log(Math.max(...values));
+
+        console.log(Math.max(...values, 60, 70));
+
+        let parts = ["shoulders", "knees"];
+        let lyrics = ["head", ...parts, "and", "toes"];
+        console.log(lyrics);
+
+        let concatArray = [...parts, ...values]; // parts.concat(values);
+        console.log(concatArray);
+
+    </script>
+</body>
+
+</html>

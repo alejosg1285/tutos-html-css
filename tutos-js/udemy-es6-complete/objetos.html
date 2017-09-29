@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Objectos en es5.
+        function createPerson(name, age) {
+            return {
+                name: name,
+                age: age
+            };
+        }
+
+        //objectos en es6
+        var person = {
+            name: "Marie",
+            sayName() {
+                console.log(this.name);
+            }
+        };
+        person.name = "Onix";
+        person.sayName();
+
+        var person = {},
+            suffix = ' name',
+            lastName = 'last';
+        person["first" + suffix] = "Alejandro";
+        person[lastName + suffix] = "Garcia";
+
+        console.log(person["first" + suffix]);
+        console.log(person[lastName + suffix]);
+
+        let someone = {
+            getGreetting() {
+                return "Hola";
+            }
+        };
+
+        let cat = {
+            getGreetting() {
+                return "miau";
+            }
+        };
+
+        let friend = Object.create(someone);
+        console.log(friend.getGreetting());
+        console.log(Object.getPrototypeOf(friend) === someone);
+        //Cambiar el prototipo del objecto.
+        Object.setPrototypeOf(friend, cat);
+        console.log(friend.getGreetting());
+        console.log(Object.getPrototypeOf(friend) === someone);
+
+        //Sobre escribir método.
+        let pet = {
+            getGreetting() {
+                //return Object.getPrototypeOf(this).getGreetting.call(this) + ", Hi";
+                return super.getGreetting.call(this) + ", Hi";
+            }
+        };
+        Object.setPrototypeOf(pet, someone);
+        console.log(pet.getGreetting());
+
+    </script>
+</body>
+
+</html>

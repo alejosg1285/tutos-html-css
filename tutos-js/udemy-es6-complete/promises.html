@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pi = new Promise(function(resolve, reject) {
+            resolve(40);
+        });
+
+        pi.then(function(value) {
+            console.log("Result 1: " + value);
+            return value + 1;
+        }).then(function(value) {
+            console.log("Result 2: " + value);
+            return value + 1;
+        }).then(function(value) {
+            console.log("Result 3: " + value);
+        });
+
+        let zi = new Promise(function(resolve, reject) {
+            reject(40);
+        });
+
+        zi.catch(function(value) {
+            console.log("Result 1: " + value);
+            return value + 1;
+        }).then(function(value) {
+            console.log("Result 2: " + value);
+            return value + 1;
+        })
+
+    </script>
+</body>
+
+</html>

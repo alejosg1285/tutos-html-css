@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //class PersonClass {
+        let PersonClass = class {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+        }
+
+        let person = new PersonClass("Alejandro");
+        person.sayName();
+
+        let person2 = new class {
+            constructor(name) {
+                this.name = name;
+            }
+
+            sayName() {
+                console.log(this.name);
+            }
+        }("Orion");
+        person2.sayName();
+
+        //compute function name.
+        let methodName = "sayName";
+        class PersonClassX {
+            constructor(name) {
+                    this.name = name;
+                }
+                [methodName]() {
+                    console.log(this.name);
+                }
+            static createName(value) {
+                console.log(value);
+            }
+        }
+        let personX = new PersonClassX("Luna");
+        personX.sayName();
+        PersonClassX.createName("Marie");
+
+        //Inhetance
+        class Rectangle {
+            constructor(length, width) {
+                this.length = length;
+                this.width = width;
+            }
+
+            static create(length, width) {
+                return new Rectangle(length, width);
+            }
+
+            getArea() {
+                console.log("Parent getArea called");
+                return this.length + this.width;
+            }
+        }
+        class Square extends Rectangle {
+            constructor(length) {
+                super(length, length);
+            }
+            /*constructor(...args) {
+                super(...args);
+            }*/
+            getArea() {
+                console.log("Derived getArea called");
+                //return this.length + this.length;
+                return super.getArea();
+            }
+        }
+        var square = new Square(4);
+        console.log(square.getArea());
+
+        var rect = Rectangle.create(3, 3);
+        console.log(rect.getArea());
+
+    </script>
+</body>
+
+</html>

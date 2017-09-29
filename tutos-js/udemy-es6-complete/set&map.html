@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="element">Hello</p>
+    <script>
+        let mySet = new Set([1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7]);
+        //Eliminar un valor.
+        mySet.delete(4);
+        //Verificar si existe el valor;
+        console.log(mySet.has(4));
+        //Eliminar todos los valores.
+        mySet.clear();
+        //Cuenta los elementos unicos.
+        console.log(mySet.size);
+
+        mySet = new Set([1, 2, 3, 4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7]);
+
+        mySet.forEach(function(value, key, ownerSet) {
+            console.log(value + " - " + key);
+            console.log(ownerSet);
+        });
+
+        let processor = {
+            output(value) {
+                console.log(value);
+            },
+            process(dataSet) {
+                dataSet.forEach((value) => this.output(value));
+            }
+            /*process(dataSet) {
+                dataSet.forEach(function(value) {
+                    this.output(value);
+                }, this);
+            }*/
+        };
+        processor.process(mySet);
+
+        //Convertir un Set a un arreglo.
+        let myArray = [...mySet];
+        console.log(myArray);
+
+        //MAPS
+        let map = new Map(),
+            key1 = {},
+            key2 = {};
+
+        map.set("nombre", "Kal-El");
+        map.set("year", 2017);
+        map.set(key1, 5);
+        map.set(key2, 15);
+
+        console.log(map);
+
+        map.delete(key2);
+        console.log(map.size);
+        console.log(map.has("name"));
+        console.log(map.get(key2));
+
+        map.clear();
+        console.log(map.size);
+
+        //Iniciar un map con arreglos, siempre que se inicializa en la declaracion debe hacerse con arreglos.
+        let myMap = new Map([
+            ["name", "Superman"],
+            ["planet", "Krypton"],
+            [key1, "Siempre con arreglos"]
+        ]);
+
+        console.log(myMap.size);
+        console.log(myMap.has("name"));
+
+        //Foreach en map.
+        myMap.forEach(function(value, key, ownerMap) {
+            console.log(value + " - " + key);
+            console.log(ownerMap === myMap);
+        });
+
+        //WeakMap
+        let weakMap = new WeakMap(),
+            element = document.querySelector('.element');
+        console.log(element);
+
+        weakMap.set(element, 'Original value');
+        let value = weakMap.get(element);
+        console.log(value);
+
+    </script>
+</body>
+
+</html>

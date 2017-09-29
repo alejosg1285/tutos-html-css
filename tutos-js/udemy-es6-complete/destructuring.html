@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let options = {
+            repeat: true,
+            save: false
+        };
+
+        /*let repeat = options.repeat,
+            save = options.save;*/
+        //Si la variable externa tiene un nombre diferente se usan los puntos :
+        let {
+            repeat: externalRepeat,
+            save,
+            isValid = false
+        } = options;
+        //Si las variables ya estan definidas, se pueden re-asignar con:
+        // ({repeat, save} = options)
+
+        console.log(externalRepeat);
+        console.log(save);
+        console.log(isValid);
+
+        let newNode = {
+            type: "Identified",
+            name: "John",
+            loc: {
+                start: {
+                    line: 1,
+                    column: 2
+                },
+                end: {
+                    line: 10,
+                    column: 30
+                }
+            },
+            range: [3, 5]
+        };
+
+        let {
+            loc: {
+                start: {
+                    line,
+                    column
+                }
+            },
+            range: [startIndex]
+        } = newNode;
+        console.log(line);
+        console.log(column);
+        console.log(startIndex);
+
+        //Arreglos
+        let colours = ["red", "blue", "green"];
+        let [firstColour, secondColour] = colours;
+        let [, , thirdColour] = colours;
+        console.log(firstColour);
+        console.log(secondColour);
+        console.log(thirdColour);
+
+        //Valores por defecto para objetos que entran como parametro y sus valores.
+        function setCookie(name, value, {
+            secure = false,
+            path = "/",
+            domain = "example.com",
+            expire = new Date(Date.now() + 360000)
+        } = {}) {
+            //Implementar codigo aca.
+            console.log(domain);
+        }
+        setCookie("type", "js");
+
+    </script>
+</body>
+
+</html>

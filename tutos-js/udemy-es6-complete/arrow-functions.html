@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var reflect = value => value;
+        //igual a: var reflect = funcion(value){return value;}
+        console.log(reflect("Orion"));
+
+        var sum = (num1, num2) => num1 + num2;
+        //igual a: var sum = function(num1, num2){return num1 + num2;}
+        console.log(sum(3, 5));
+
+        var getName = () => "Luna";
+        //igual a: var getName = function(){ return "Luna"; }
+        console.log(getName());
+
+        var doNothing = () => {};
+        //igual a: var doNothing = function() {}
+
+        var getTempItem = id => ({
+            id: id,
+            Temp: "Temp"
+        });
+        /*igual a:
+        var getTempItem = function(id) {
+            return {
+                id: id,
+                Temp: "Temp"
+            };
+        }
+        */
+        console.log(getTempItem(4));
+
+        var values = [10, 2, 5, 9, 60];
+
+        var result = values.sort((a, b) => a - b);
+        /*igual a:
+        var result = values.sort(function(a, b) {
+            return a - b;
+        });
+        */
+        console.log(result);
+
+        function myFunction() {
+            //console.log(arguments[0]);
+            return () => arguments[0];
+        }
+        var myValue = myFunction("Isma");
+        console.log(myValue());
+
+        console.log("Arrow functions con IIFE (immediately invoked function expressions)");
+
+        let person = ((name) => {
+            return {
+                getName: function() {
+                    return name
+                }
+            };
+        })("Isis");
+        console.log(person.getName());
+
+    </script>
+</body>
+
+</html>
