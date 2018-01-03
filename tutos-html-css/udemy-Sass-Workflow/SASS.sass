@@ -1,0 +1,79 @@
+$width: 600px
+$float: 1.5
+$int: 20
+
+$string: "../udemy-bootstrap4-desdecero/images/img1.png"
+$stringTwo: "../udemy-bootstrap4-desdecero/images/img2.png"
+$stringThree: no-repeat
+$stringSelector: element
+
+$colString: gray
+$hex: #ccc
+$rgb: rgb(230, 230, 230)
+$rgba: rgba(230, 230, 230, 2)
+
+$list: 1px 1px 3px black, 3px 3px 4px #ccc
+
+$el: button
+$elList: elementOne, elementTwo, elementThre
+
+div ##{$stringSelector} 
+    background: url($string) $stringThree $colString
+    box-shadow: $list
+    line-height: $float
+    width: $width
+/** Inheritance **/
+#parent ##{$el}
+    background: $hex
+    #child-one,another, .evenmore
+        background: $rgb
+        font-size: 1em
+    #child-two
+        font-weight: 200
+        #inner-child, .contenct
+            background: blue
+    &.hasClass ##{$el}
+        background: blue
+        font-style: italic
+        font-weight: bold
+
+/** Mixins **/
+
+$color: orange
+=cssProperties($argOne, $argTwo)
+    #main
+        color: $argOne
+        background: green
+        line-height: 1.8
+
+=boxShadow($shadow...)
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    -o-box-shadow: $shadow
+    box-shadow: $shadow
+
+=keyframes($name)
+    @-moz-keyframes #{$name}
+        @content
+    
+    @-webkit-keyframes #{$name}
+        @content
+    
+    @-o-keyframes #{$name}
+        @content
+    
+    @keyframes #{$name}
+        @content
+
+body
+    color: green
+    width: 200px
+
+    @include boxShadow(1px 2px 3px rgba(0, 0, 0, 0.3), 4px 4px 2px gray)
+    @include cssProperties($color, 2.5)
+
++keyframes(myAnim)
+    0%
+        opacity: 0
+    100%
+        opacity: 1

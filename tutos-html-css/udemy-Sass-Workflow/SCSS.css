@@ -1,0 +1,71 @@
+div #element {
+  background: url("../udemy-bootstrap4-desdecero/images/img1.png") no-repeat gray;
+  -webkit-box-shadow: 1px 1px 3px black, 3px 3px 4px #ccc;
+          box-shadow: 1px 1px 3px black, 3px 3px 4px #ccc;
+  line-height: 1.5;
+  width: 600px;
+}
+
+/** Inheritance **/
+#parent {
+  background: #ccc;
+}
+#parent #child-one,
+#parent another,
+#parent .evenmore {
+  background: #e6e6e6;
+  font-size: 1em;
+}
+#parent #child-two {
+  font-weight: 200;
+}
+#parent #child-two #inner-child .content {
+  background: blue;
+}
+#parent.hasClass #button {
+  background: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#parent .content .child, #parent .sing .child,
+#parent video .child,
+#parent img .child,
+#parent elementOne .child, #parent elementTwo .child, #parent elementThre .child {
+  background: green;
+  font-size: 2em;
+}
+
+.content {
+  line-height: 2em;
+}
+
+/** Mixins **/
+body {
+  color: green;
+  width: 200px;
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 4px 2px gray;
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 4px 2px gray;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 4px 2px gray;
+}
+body #main {
+  color: orange;
+  background: green;
+  line-height: 1.8;
+}
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

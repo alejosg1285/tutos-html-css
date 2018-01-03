@@ -1,0 +1,32 @@
+{
+  "name": "pirategram-client",
+  "version": "0.1.0",
+  "description": "cliente para pirategram",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && ava"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
+  },
+  "author": "Alenadro Saa",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "babel-eslint": "^8.0.3",
+    "standard": "^10.0.3",
+    "uuid-base62": "^0.1.0"
+  }
+}
